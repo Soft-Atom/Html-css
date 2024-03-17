@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Форма регистрации</title>
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1>Регистрация</h1>
+                <div>Уже есть аккаунт? <a href="/login">Войти</a></div>
+                <form action="/register" method="post">
+                    <div>
+                        <label>
+                            <span>Моя компания</span>
+                            <input type="text" name="company" />
+                        </label>
+                    </div>
+                    <div>
+                        <div>
+                            <label>
+                                <span>Имя</span>
+                                <input type="text" name="firstName" />
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <span>Фамилия</span>
+                                <input type="text" name="lastName" />
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>
+                            <span>E-mail *</span>
+                            <input type="email" name="email" required />
+                        </label>
+                    </div>
+                    <button type="submit">
+                        Зарегистрироваться
+                        <span>
+                            <img
+                                src="./images/Arrow 1.png"
+                                alt="Иконка зарегистрироваться"
+                            />
+                        </span>
+                    </button>
+                    <div>
+                        <div>
+                            <label>
+                                <span>Я прочитал и принимаю</span>
+                                <input type="checkbox" />
+                            </label>
+                        </div>
+                        <div><a href="/policy">Условия использования</a></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
