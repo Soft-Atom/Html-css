@@ -1,0 +1,18 @@
+main {
+    background: linear-gradient(
+            225deg,
+            rgb(253 196 196 / 100%) 0 25%,
+            rgb(242 152 222 / 0%)
+        ),
+        linear-gradient(
+            225deg,
+            rgb(255 165 165 / 100%) 0 33%,
+            rgb(255 255 255 / 0%) 82%
+        ),
+        #f39494;
+}
+
+/* main {
+    background: #f39494, linear-gradient(225deg, #ffa5a5 33%, #ffffff 82%),
+        linear-gradient(225deg, #fdc5c5 0 25%, #f298de 100% 0%);
+} */
