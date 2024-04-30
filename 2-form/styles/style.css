@@ -1,18 +1,103 @@
-main {
+:root {
+    --font: "Open Sans", sans-serif;
+    --link-color: #089fe0;
+    --input-background: #f5f5f5;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--link-color);
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+}
+
+label span {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: #999;
+}
+
+input,
+button {
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    padding: 9px 11px;
+}
+
+input {
+    background: var(--input-background);
+}
+
+button {
+    background: var(--link-color);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.company input {
+    border: 1px solid #f5f5f5;
+    background: #ffffff;
+}
+
+.company span {
+    font-weight: 600;
+    color: #333;
+    font-style: normal;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.title span {
+    font-weight: 400;
+    font-size: 18px;
+    color: #666;
+}
+
+.terms,
+.terms span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    font-style: normal;
+}
+
+.backgroundOverlay {
+    min-height: 100vh;
     background: linear-gradient(
             225deg,
-            rgb(253 196 196 / 100%) 0 25%,
-            rgb(242 152 222 / 0%)
+            rgba(253, 196, 196, 100%) 0 25%,
+            rgba(242, 152, 222, 0%)
         ),
         linear-gradient(
             225deg,
-            rgb(255 165 165 / 100%) 0 33%,
-            rgb(255 255 255 / 0%) 82%
+            rgba(255, 165, 165, 100%) 0 33%,
+            rgba(255, 255, 255, 0%) 82%
         ),
         #f39494;
 }
 
-/* main {
-    background: #f39494, linear-gradient(225deg, #ffa5a5 33%, #ffffff 82%),
-        linear-gradient(225deg, #fdc5c5 0 25%, #f298de 100% 0%);
-} */
+.regFormWrap {
+    background: #fffefe;
+    border-radius: 10px;
+    margin: 0px auto;
+    width: 396px;
+    padding: 72px 93px 91px;
+}
