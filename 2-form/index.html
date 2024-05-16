@@ -17,51 +17,55 @@
                         >
                     </div>
                     <form action="/register" method="post" class="regForm">
-                        <div class="company">
+                        <div class="fieldInputText company">
                             <label>
-                                <span>Моя компания</span>
                                 <input type="text" name="company" />
+                                <span class="regFormTitle"> Моя компания </span>
                             </label>
                         </div>
-                        <div>
-                            <div>
+                        <div class="group fio">
+                            <div class="fieldInputText">
                                 <label>
-                                    <span>Имя</span>
-                                    <input type="text" name="firstName" />
+                                    <input
+                                        class="leftBorder"
+                                        type="text"
+                                        name="firstName"
+                                    />
+                                    <span class="regFormTitle"> Имя </span>
                                 </label>
                             </div>
-                            <div>
+                            <div class="fieldInputText">
                                 <label>
-                                    <span>Фамилия</span>
-                                    <input type="text" name="lastName" />
+                                    <input
+                                        class="rightBorder"
+                                        type="text"
+                                        name="firstName"
+                                    />
+                                    <span class="regFormTitle"> Фамилия </span>
                                 </label>
                             </div>
                         </div>
-                        <div>
+                        <div class="fieldInputText">
                             <label>
-                                <span>E-mail *</span>
+                                <span class="regFormTitle">E-mail *</span>
                                 <input type="email" name="email" required />
                             </label>
                         </div>
-                        <div>
-                            <button type="submit">
-                                Зарегистрироваться
-                                <span>
-                                    <img
-                                        src="./images/Arrow 1.png"
-                                        alt="Иконка зарегистрироваться"
-                                    />
-                                </span>
-                            </button>
-                        </div>
-                        <div class="terms">
-                            <div>
+                        <button type="submit">
+                            Зарегистрироваться
+                            <img
+                                src="./images/Arrow 1.png"
+                                alt="Иконка зарегистрироваться"
+                            />
+                        </button>
+                        <div class="group terms">
+                            <div class="fieldCheckbox">
                                 <label>
-                                    <span>Я прочитал и принимаю</span>
                                     <input type="checkbox" />
+                                    <span>Я прочитал и принимаю</span>
                                 </label>
                             </div>
-                            <div>
+                            <div class="field">
                                 <a href="/policy">Условия использования</a>
                             </div>
                         </div>
