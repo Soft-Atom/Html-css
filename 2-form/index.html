@@ -8,61 +8,76 @@
     </head>
     <body>
         <main>
-            <div class="backgroundOverlay">
-                <div class="regFormWrap">
-                    <div class="title">
-                        <h1>Регистрация</h1>
-                        <span
+            <div class="reg-form-wrapper">
+                <div class="reg-form">
+                    <div class="header reg-form__header">
+                        <h1 class="header__h1">Регистрация</h1>
+                        <span class="header__bottom"
                             >Уже есть аккаунт? <a href="/login">Войти</a></span
                         >
                     </div>
-                    <form action="/register" method="post" class="regForm">
-                        <div class="fieldInputText company">
-                            <label>
-                                <input type="text" name="company" />
-                                <span class="regFormTitle"> Моя компания </span>
+                    <form action="/register" method="post" class="form">
+                        <div class="input-container input-ghost">
+                            <label class="input__label">
+                                <input
+                                    class="input__text"
+                                    type="text"
+                                    name="company"
+                                />
+                                <span class="input__span"> Моя компания </span>
                             </label>
                         </div>
                         <div class="group fio">
-                            <div class="fieldInputText">
-                                <label>
+                            <div class="input-container">
+                                <label class="input__label">
                                     <input
-                                        class="leftBorder"
+                                        class="input__text .input-text__left-border"
                                         type="text"
                                         name="firstName"
                                     />
-                                    <span class="regFormTitle"> Имя </span>
+                                    <span class="input__span"> Имя </span>
                                 </label>
                             </div>
-                            <div class="fieldInputText">
-                                <label>
+                            <div class="input-container">
+                                <label class="input__label">
                                     <input
-                                        class="rightBorder"
+                                        class="input__text input-text__rignt-border"
                                         type="text"
                                         name="firstName"
                                     />
-                                    <span class="regFormTitle"> Фамилия </span>
+                                    <span class="input__span"> Фамилия </span>
                                 </label>
                             </div>
                         </div>
-                        <div class="fieldInputText">
-                            <label>
-                                <span class="regFormTitle">E-mail *</span>
-                                <input type="email" name="email" required />
+                        <div class="input-container">
+                            <label class="input__label">
+                                <input
+                                    class="input__text"
+                                    type="email"
+                                    name="email"
+                                    required
+                                />
+                                <span class="input__span">E-mail *</span>
                             </label>
                         </div>
-                        <button type="submit">
+                        <button class="button" type="submit">
                             Зарегистрироваться
                             <img
+                                class="button__image button__image-right"
                                 src="./images/Arrow 1.png"
                                 alt="Иконка зарегистрироваться"
                             />
                         </button>
                         <div class="group terms">
-                            <div class="fieldCheckbox">
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>Я прочитал и принимаю</span>
+                            <div class="checkbox-container">
+                                <label class="checkbox__label">
+                                    <input
+                                        class="checkbox__checkbox"
+                                        type="checkbox"
+                                    />
+                                    <span class="checkbox__span"
+                                        >Я прочитал и принимаю</span
+                                    >
                                 </label>
                             </div>
                             <div class="field">
