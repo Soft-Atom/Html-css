@@ -79,7 +79,10 @@ a {
     border-radius: 0 5px 5px 0;
 }
 
-/* !!! как тут правильно сделать? */
+/* !!! как тут правильно сделать? 
+когда в импуте есть текст 
+шрифт доложен 8 остаться
+*/
 .input__text:not(:empty) ~ .input__span,
 .input__text:focus ~ .input__span {
     font-size: 8px;
