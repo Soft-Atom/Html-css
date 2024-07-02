@@ -7,48 +7,72 @@
         <link rel="stylesheet" href="./styles/stle.css" />
     </head>
     <body>
-        <header>
-            <div><span>В</span>Мой блог</div>
-            <nav>
-                <ul>
-                    <li><a href="#">HTML и CSS</a></li>
-                    <li><a href="#">Frontend</a></li>
-                    <li><a href="#">Backend</a></li>
-                </ul>
-            </nav>
-            <div class="headerSearch">
-                <form action="/global-search">
-                    <label>
-                        <span>Найти</span>
-                        <input type="text" name="q" required />
-                    </label>
-                    <button type="submit">
-                        <img src="./images/search.svg" alt="Иконка поиска" />
-                    </button>
-                </form>
-            </div>
-        </header>
-        <article>
-            <div class="supHeader">
-                <span class="tag">Frontend</span>
-                <span>&bull;</span>
-                <time>12 мая 2024</time>
-            </div>
-            <h1>Теория цвета - Как цвет влияет на поведение потребителей</h1>
-
-            <div class="author">
-                <img src="./images/profile-photo.png" alt="Фото профиля" />
-                <div class="description">
-                    <span class="name">Наталья Васильева</span
-                    ><span class="profession">Разработчик</span>
+        <header class="site-header">
+            <div class="site-header-wrapper">
+                <div clas="site-logo">
+                    <span class="site-logo__logo">В</span>Мой блог
+                </div>
+                <nav class="site-menu">
+                    <ul class="site-menu__list">
+                        <li><a href="#">HTML и CSS</a></li>
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Backend</a></li>
+                    </ul>
+                </nav>
+                <div class="site-header-search">
+                    <form
+                        class="site-header-search__form"
+                        action="/global-search"
+                    >
+                        <input class="site-header-search__input type="text"
+                        name="q" placeholder="Поиск" required />
+                        <button
+                            class="site-header-search__button"
+                            type="submit"
+                        >
+                            <img
+                                src="./images/search.svg"
+                                alt="Иконка поиска"
+                            />
+                        </button>
+                    </form>
                 </div>
             </div>
-            <img
-                src="./images/article-image.png"
-                alt="Изображение статьи"
-                class="postImage"
-            />
-            <p>
+        </header>
+        <article class="post">
+            <div class="post-title">
+                <div class="post-title-header">
+                    <div class="post-title-header__top">
+                        <span class="post-title-header__tag">Frontend</span>
+                        <span>&bull;</span>
+                        <time>12 мая 2024</time>
+                    </div>
+                    <h1 class="post-title-header__h1">
+                        Теория цвета - Как цвет влияет на поведение потребителей
+                    </h1>
+                </div>
+                <div class="post-title-author">
+                    <img
+                        class="post-title-author__logo"
+                        src="./images/profile-photo.png"
+                        alt="Фото профиля"
+                    />
+                    <div class="post-title-author__description">
+                        <span class="post-title-author__name"
+                            >Наталья Васильева</span
+                        ><span class="post-title-author__profession"
+                            >Разработчик</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="post-image">
+                <img
+                    src="./images/article-image.png"
+                    alt="Изображение статьи"
+                />
+            </div>
+            <p class="post-p">
                 Теория цвета — это особенности эмоционального восприятия
                 человеком тех или иных цветовых решений. Цвета и различные их
                 комбинации влияют на психику человека, а значит, во многом
@@ -58,14 +82,14 @@
                 положительное отношение к продукту, подтолкнуть посетителей к
                 совершению целевых действий, повысить конверсию.
             </p>
-            <p>
+            <p class="post-p">
                 Универсального ответа на вопрос, как тот или иной цвет влияет на
                 разных людей, нет. Эмоциональная и поведенческая реакция каждого
                 человека зависит от личного опыта. Вместе с тем можно выделить
                 определенные закономерности влияния цветов на поведение
                 пользователей.
             </p>
-            <p>
+            <p class="post-p">
                 В исследовании «Влияние цвета на маркетинг» (Impact of color on
                 marketing) говорится, что использование разных цветов может
                 существенно влиять на настроение и поведение потребителей.
@@ -80,8 +104,11 @@
                 только на его цвете.
             </p>
         </article>
-        <footer>
-            <div><a href="#">Все права защищены</a>&copy; 2024</div>
+        <footer class="site-footer">
+            <div class="site-footer-wrapper">
+                <a class="site-footer__link" href="#">Все права защищены</a
+                >&copy; 2024
+            </div>
         </footer>
     </body>
 </html>

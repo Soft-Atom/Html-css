@@ -1,87 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --font: "Open Sans", sans-serif;
     --link-color: #089fe0;
     --input-background: #f5f5f5;
-}
-
-body {
-    margin: 0;
-    font-family: var(--font);
-    box-sizing: border-box;
-}
-
-a {
-    color: var(--link-color);
-}
-
-h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 36px;
-    text-align: center;
-    color: #333;
-}
-
-label span {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    color: #999;
-}
-
-input,
-button {
-    height: 44px;
-    border-radius: 5px;
-    border: none;
-    padding: 9px 11px;
-}
-
-input {
-    background: var(--input-background);
-}
-
-button {
-    background: var(--link-color);
-    font-weight: 400;
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-}
-
-.company input {
-    border: 1px solid #f5f5f5;
-    background: #ffffff;
-}
-
-.company span {
-    font-weight: 600;
-    color: #333;
-    font-style: normal;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 47px;
-}
-
-.title span {
-    font-weight: 400;
-    font-size: 18px;
-    color: #666;
-}
-
-.terms,
-.terms span {
-    font-weight: 400;
-    font-size: 14px;
-    color: #666;
-    font-style: normal;
-}
-
-.backgroundOverlay {
-    min-height: 100vh;
-    background: linear-gradient(
+    --window-backround: linear-gradient(
             225deg,
             rgba(253, 196, 196, 100%) 0 25%,
             rgba(242, 152, 222, 0%)
@@ -94,10 +19,169 @@ button {
         #f39494;
 }
 
-.regFormWrap {
+body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--window-backround);
+}
+
+a {
+    color: var(--link-color);
+}
+
+.header {
+    margin-bottom: 47px;
+}
+
+.header__h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    color: #333;
+}
+
+.header__bottom {
+    font-weight: 400;
+    font-size: 18px;
+    color: #666;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input__text {
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    background: var(--input-background);
+    padding: 16px 11px 6px;
+}
+
+.input-text__left-border {
+    border-radius: 5px 0 0 5px;
+}
+
+.input-text__rignt-border {
+    border-radius: 0 5px 5px 0;
+}
+
+/* !!! как тут правильно сделать? 
+когда в импуте есть текст 
+шрифт доложен 8 остаться
+*/
+.input__text:not(:empty) ~ .input__span,
+.input__text:focus ~ .input__span {
+    font-size: 8px;
+}
+
+.input__span {
+    position: absolute;
+    top: 9px;
+    left: 11px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: #999;
+    transition: font-size 0.5s ease;
+}
+
+.input-ghost .input__text {
+    border: 1px solid #f5f5f5;
+    background: #ffffff;
+}
+
+.input-ghost .input__span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+.checkbox-container {
+    display: flex;
+}
+
+.checkbox__label {
+    display: flex;
+    gap: 4px;
+}
+
+.checkbox__span {
+    color: #666;
+}
+
+.button {
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    background: var(--link-color);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__image {
+    position: absolute;
+}
+
+.button__image-right {
+    right: 24px;
+}
+
+.reg-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.reg-form {
     background: #fffefe;
     border-radius: 10px;
-    margin: 0px auto;
-    width: 396px;
+    flex: 0 1 clamp(375px, 100% - 20px, 587px);
     padding: 72px 93px 91px;
+}
+
+.reg-form__header {
+    text-align: center;
+}
+
+.group {
+    display: flex;
+}
+
+.fio {
+    flex-direction: row;
+    gap: 1px;
+}
+
+.fio .input-container {
+    flex: 0 1 calc(100% / 2 - 1px / 2);
+}
+
+.terms {
+    flex-direction: row;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
 }
